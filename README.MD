@@ -22,7 +22,7 @@ The Databricks Unity Catalog Graph Lineage Tool has the following features:
 
 ## How many different types of UC Lineage Graphs can be created?
 
-- In the Databricks notebook section __'Create and Show Lineage Graph With Nodes and Edges'__ update the following sections below in _red_, and use the __'Build Graph Examples'__ below to understand the different ways to set __'data_level'__ and __'graph_level'__.  Please update the  __'src_catalog_list'__, __'src_schema_list'__, and __'src_table_list'__ so the get_column_lineage_data() Python function knows what data to query for the UC Lineage Graph.  You can include multiple catalogs, schemas, and tables in each of these lists
+- In the Databricks notebook section __'Create and Show Lineage Graph With Nodes and Edges'__ update the following sections below in _red_, and use the __'Build Graph Examples'__ below to understand the different ways to set __'data_level'__ and __'graph_level'__.  Please update the  __'src_catalog_list'__, __'src_schema_list'__, and __'src_table_list'__ so the get_column_lineage_data() Python function knows what data to query for the UC Lineage Graph.  You can include multiple catalogs, schemas, and tables in each of these lists.
 
 ![update_data_graph_level.png](/readme_images/update_data_graph_level.png)
 
@@ -86,3 +86,10 @@ with table data in the 'system.billing' Databricks schema.  This can give you a 
 - data_level = "schema" and graph_level = "schema"
 
 ![catalog_to_catalog__table_level_graph.png](/readme_images/schema_to_schema__schema_level_graph.png)
+
+- Here is a 'source table' to 'target tarble' UC Lineage Graph example at the 'table' data level.  This shows a subset the Metastore tables which are updated
+with table data in the 'system.billing.list_prices' Databricks table.  This can give you a holistic understanding of high-level data movement between tables for a single or multiple source tables.
+
+- data_level = "schema" and graph_level = "schema"
+
+![catalog_to_catalog__table_level_graph.png](/readme_images/table_to_table__table_level_graph.png)

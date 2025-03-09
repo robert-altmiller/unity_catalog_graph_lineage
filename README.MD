@@ -18,10 +18,11 @@ The Databricks Unity Catalog Graph Lineage Tool has the following features:
 - Prevents data silos by offering a centralized view of how data is transformed.
 - Provides a transparent way to quickly audit data movement, and this critical for regulatory compliance (e.g., GDPR, HIPAA, SOC2).
 - Improves data security monitoring by enabling the identication of unexpected data movement.
+- If a user resizes their browser window the LineageGraph Python class adjusts the graph width dynamically.
 
 ## How many different types of UC Lineage Graphs can be created?
 
-- In the Databricks notebook section __'Create and Show Lineage Graph With Nodes and Edges'__ update the following section below in _red_, and use the __'Build Graph Examples'__ below to understand the different ways to set __data_level__ and __graph_level__.
+- In the Databricks notebook section __'Create and Show Lineage Graph With Nodes and Edges'__ update the following section below in _red_, and use the __'Build Graph Examples'__ below to understand the different ways to set __'data_level'__ and __'graph_level'__.
 
 ![update_data_graph_level.png](/readme_images/update_data_graph_level.png)
 
@@ -55,3 +56,9 @@ The Databricks Unity Catalog Graph Lineage Tool has the following features:
 | What **SUBSET** of 'target' columns get updated for >= 1 'source' catalog.schema? | `'schema'` | `'column'` |
 | What **SUBSET** of 'target' columns get updated for >= 1 'source' catalog.schema.table? | `'table'` | `'column'` |
 
+## Show different UC Lineage Graphs examples
+
+- Here is a source catalog to target catalog UC Lineage Graph example.  In this case this shows all the catalogs for the entire Databricks metastore which are updated
+with table data in the 'system' Databricks catalog.
+
+![catalog_to_catalog_graph.png](/readme_images/catalog_to_catalog_graph.png)

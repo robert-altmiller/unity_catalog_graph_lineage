@@ -95,7 +95,7 @@ with table data in the 'system.billing.list_prices' Databricks table.  This can 
 ![table_to_table__table_level_graph.png](/readme_images/table_to_table__table_level_graph.png)
 
 - Here is a 'source table (with columns)' to 'target table (with columns)' UC Lineage Graph example at the 'column' data level.  This shows a subset the Metastore tables + columns which are updated
-with table data in the 'system.billing.list_prices' Databricks table.  This can give you a holistic understanding of high-level data movement between tables for a single or multiple source tables.
+with table data in the 'system.billing.list_prices' Databricks table.  This can give you a holistic understanding of high-level data movement between tables + columns for a single or multiple source tables.
 
 - data_level = "table" and graph_level = "column"
 

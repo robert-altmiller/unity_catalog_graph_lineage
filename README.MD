@@ -22,8 +22,7 @@ The Databricks Unity Catalog Graph Lineage Tool has the following features:
 
 ## How many different types of UC Lineage Graphs can be created?
 
-- In the Databricks notebook section __'Create and Show Lineage Graph With Nodes and Edges'__ update the following section below in _red_, and use the __'Build Graph Examples'__ below to understand the different ways to set __'data_level'__ and __'graph_level'__.  You
-will also want to update the  __'src_catalog_list'__, __'src_schema_list'__, and __'src_table_list'__ so the get_column_lineage_data() Python function knows what data to query for the UC Lineage Graph.  You can include multiple catalogs, schemas, and tables in each of these lists
+- In the Databricks notebook section __'Create and Show Lineage Graph With Nodes and Edges'__ update the following sections below in _red_, and use the __'Build Graph Examples'__ below to understand the different ways to set __'data_level'__ and __'graph_level'__.  Please update the  __'src_catalog_list'__, __'src_schema_list'__, and __'src_table_list'__ so the get_column_lineage_data() Python function knows what data to query for the UC Lineage Graph.  You can include multiple catalogs, schemas, and tables in each of these lists
 
 ![update_data_graph_level.png](/readme_images/update_data_graph_level.png)
 

@@ -345,4 +345,3 @@ lineage_graph.build_graph()
 lineage_graph.show_graph()
 
 # COMMAND ----------
-

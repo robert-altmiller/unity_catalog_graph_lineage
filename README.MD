@@ -61,4 +61,4 @@ The Databricks Unity Catalog Graph Lineage Tool has the following features:
 - Here is a source catalog to target catalog UC Lineage Graph example.  In this case this shows all the catalogs for the entire Databricks metastore which are updated
 with table data in the 'system' Databricks catalog.
 
-![src_catalog_target_catalog_graph.png](/readme_images/src_catalog_target_catalog_graph.png)
+![catalog_to_catalog_graph.png](/readme_images/catalog_to_catalog_graph.png)

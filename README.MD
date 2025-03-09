@@ -85,11 +85,11 @@ with table data in the 'system.billing' Databricks schema.  This can give you a 
 
 - data_level = "schema" and graph_level = "schema"
 
-![catalog_to_catalog__table_level_graph.png](/readme_images/schema_to_schema__schema_level_graph.png)
+![schema_to_schema__schema_level_graph.png](/readme_images/schema_to_schema__schema_level_graph.png)
 
 - Here is a 'source table' to 'target tarble' UC Lineage Graph example at the 'table' data level.  This shows a subset the Metastore tables which are updated
 with table data in the 'system.billing.list_prices' Databricks table.  This can give you a holistic understanding of high-level data movement between tables for a single or multiple source tables.
 
 - data_level = "schema" and graph_level = "schema"
 
-![catalog_to_catalog__table_level_graph.png](/readme_images/table_to_table__table_level_graph.png)
+![table_to_table__table_level_graph.png](/readme_images/table_to_table__table_level_graph.png)

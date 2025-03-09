@@ -26,30 +26,30 @@ The Databricks Unity Catalog Graph Lineage Tool has the following features:
 ## Catalog Level
 | Description | Data Level | Graph Level |
 |------------|-----------|-------------|
-| What are **ALL** the 'target' catalogs that get updated for >= 1 'source' catalog? | `catalog` | `catalog` |
-| What **SUBSET** of 'target' catalogs get updated for >= 1 'source' catalog.schema? | `schema` | `catalog` |
-| What **SUBSET** of 'target' catalogs get updated for >= 1 'source' catalog.schema.table? | `table` | `catalog` |
+| What are **ALL** the 'target' catalogs that get updated for >= 1 'source' catalog? | `'catalog'` | `'catalog'` |
+| What **SUBSET** of 'target' catalogs get updated for >= 1 'source' catalog.schema? | `'schema'` | `'catalog'` |
+| What **SUBSET** of 'target' catalogs get updated for >= 1 'source' catalog.schema.table? | `'table'` | `'catalog'` |
 
 ## Schema Level
 | Description | Data Level | Graph Level |
 |------------|-----------|-------------|
-| What are **ALL** the 'target' schemas that get updated for >= 1 'source' catalog? | `catalog` | `schema` |
-| What **SUBSET** of 'target' schemas get updated for >= 1 'source' catalog.schema? | `schema` | `schema` |
-| What **SUBSET** of 'target' schemas get updated for >= 1 'source' catalog.schema.table? | `table` | `schema` |
+| What are **ALL** the 'target' schemas that get updated for >= 1 'source' catalog? | `'catalog'` | `'schema'` |
+| What **SUBSET** of 'target' schemas get updated for >= 1 'source' catalog.schema? | `'schema'` | `'schema'` |
+| What **SUBSET** of 'target' schemas get updated for >= 1 'source' catalog.schema.table? | `'table'` | `'schema'` |
 
 ## Table Level
 | Description | Data Level | Graph Level |
 |------------|-----------|-------------|
-| What are **ALL** the 'target' tables that get updated for >= 1 'source' catalog? | `catalog` | `table` |
-| What **SUBSET** of 'target' tables get updated for >= 1 'source' catalog.schema? | `schema` | `table` |
-| What **SUBSET** of 'target' tables get updated for >= 1 'source' catalog.schema.table? | `table` | `table` |
+| What are **ALL** the 'target' tables that get updated for >= 1 'source' catalog? | `'catalog'` | `'table'` |
+| What **SUBSET** of 'target' tables get updated for >= 1 'source' catalog.schema? | `'schema'` | `'table'` |
+| What **SUBSET** of 'target' tables get updated for >= 1 'source' catalog.schema.table? | `'table'` | `'table` |
 
 ## Column Level
 | Description | Data Level | Graph Level |
 |------------|-----------|-------------|
-| What are **ALL** the 'target' columns that get updated for >= 1 'source' catalog? | `catalog` | `column` |
-| What **SUBSET** of 'target' columns get updated for >= 1 'source' catalog.schema? | `schema` | `column` |
-| What **SUBSET** of 'target' columns get updated for >= 1 'source' catalog.schema.table? | `table` | `column` |
+| What are **ALL** the 'target' columns that get updated for >= 1 'source' catalog? | `'catalog'` | `'column'` |
+| What **SUBSET** of 'target' columns get updated for >= 1 'source' catalog.schema? | `'schema'` | `'column'` |
+| What **SUBSET** of 'target' columns get updated for >= 1 'source' catalog.schema.table? | `'table'` | `'column'` |
 
 
 

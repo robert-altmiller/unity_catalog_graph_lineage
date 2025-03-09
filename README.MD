@@ -62,3 +62,6 @@ The Databricks Unity Catalog Graph Lineage Tool has the following features:
 with table data in the 'system' Databricks catalog.
 
 ![catalog_to_catalog_graph.png](/readme_images/catalog_to_catalog_graph.png)
+![catalog_to_catalog_graph.png](/readme_images/catalog_to_catalog_graph.png)
+
+

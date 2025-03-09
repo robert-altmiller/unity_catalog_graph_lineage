@@ -25,6 +25,8 @@ The Databricks Unity Catalog Graph Lineage Tool has the following features:
 
 ![update_data_graph_level.png](/readme_images/update_data_graph_level.png)
 
+<span style="color:red;">red</span>
+
 # Build Graph Examples
 
 ## Catalog Level

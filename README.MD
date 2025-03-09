@@ -7,9 +7,9 @@ what datasets are being used and where for the entire Databricks regional Metast
 
 #### Link to Github Repo: https://github.com/robert-altmiller/unity_catalog_graph_lineage
 
-## Features of the UC Lineage Graph
+## Usability Features of the UC Lineage Graph
 
-The Databricks Unity Catalog Graph Lineage Tool has the following features:
+The Databricks Unity Catalog Graph Lineage Tool has the following __'usability'__ features:
 
 - The entire lineage tool runs in a single Databricks Notbook with no complicated app server setup.
 - Takes advantage of the Databricks system tables (e.g. column_lineage) which are available with Unity Catalog.
@@ -18,7 +18,20 @@ The Databricks Unity Catalog Graph Lineage Tool has the following features:
 - Prevents data silos by offering a centralized view of how data is transformed.
 - Provides a transparent way to quickly audit data movement, and this critical for regulatory compliance (e.g., GDPR, HIPAA, SOC2).
 - Improves data security monitoring by enabling the identication of unexpected data movement.
-- If a user resizes their browser window the LineageGraph Python class adjusts the graph width dynamically.
+
+## Technical Features of the UC Lineage Graph
+
+The Databricks Unity Catalog Graph Lineage Tool has the following __'technical'__ features:
+
+- Uses networkx.DiGraph() to build a directed graph representing UC data lineage.
+- Dynamically generates graph titles based on graph_level and data_level.
+- Adds edges between nodes when relationships exist, and standalone nodes are added when no connections are available.
+- Constructs detailed labels for nodes at different levels (e.g. catalog, schema, table, column).
+- Computes the number of unique target elements based on the selected graph level.
+- Injects a JavaScript script to dynamically resize the graph for better viewing experience.
+- Implements node position optimization by using spring_layout from networkx.
+- Implements KDTree-based spacing adjustments to avoid node overlap.
+- Uses Plotly to generate an interactive node-edge graph.
 
 ## How many different types of UC Lineage Graphs can be created?
 

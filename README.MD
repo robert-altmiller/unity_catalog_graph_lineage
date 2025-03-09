@@ -58,18 +58,25 @@ The Databricks Unity Catalog Graph Lineage Tool has the following features:
 
 ## Show different UC Lineage Graphs examples
 
-- Here is a 'source catalog' to 'target catalog' UC Lineage Graph example at the catalog graph level.  This shows all the catalogs for the entire Databricks metastore which are updated
+- Here is a 'source catalog' to 'target catalog' UC Lineage Graph example at the 'catalog' graph level.  This shows all the catalogs for the entire Databricks Metastore which are updated
 with table data in the 'system' Databricks catalog.  This can give you a holistic understanding of high-level data movement between catalogs for an individual catalog.
 
 - data_level = "catalog" and graph_level = "catalog"
 
 ![catalog_to_catalog__catalog_level_graph.png](/readme_images/catalog_to_catalog__catalog_level_graph.png)
 
-- Here is a 'source catalog' to 'target catalog' UC Lineage Graph example at the schema graph level.  This shows a subset the Metastore catalogs which are updated
+- Here is a 'source catalog' to 'target catalog' UC Lineage Graph example at the 'schema' graph level.  This shows a subset the Metastore catalogs which are updated
 with table data in the 'system.billing' Databricks schema.  This can give you a holistic understanding of high-level data movement between catalogs for an individual schema.
 
 - data_level = "schema" and graph_level = "catalog"
 
 ![catalog_to_catalog__schema_level_graph.png](/readme_images/catalog_to_catalog__schema_level_graph.png)
+
+- Here is a 'source catalog' to 'target catalog' UC Lineage Graph example at the 'table' graph level.  This shows a subset the Metastore catalogs which are updated
+with table data in the 'system.billing.list_prices' Databricks table.  This can give you a holistic understanding of high-level data movement between catalogs for an individual table.
+
+- data_level = "table" and graph_level = "catalog"
+
+![catalog_to_catalog__table_level_graph.png](/readme_images/catalog_to_catalog__table_level_graph.png)
 
 

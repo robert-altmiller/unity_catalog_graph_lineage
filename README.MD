@@ -21,11 +21,9 @@ The Databricks Unity Catalog Graph Lineage Tool has the following features:
 
 ## How many different types of UC Lineage Graphs can be created?
 
-- In the Databricks notebook section __'Create and Show Lineage Graph With Nodes and Edges'__ update the following section below in <span style="color:red;">red</span>, and use the __'Build Graph Examples'__ below to understand the different ways to set __data_level__ and __graph_level__.
+- In the Databricks notebook section __'Create and Show Lineage Graph With Nodes and Edges'__ update the following section below in _red_, and use the __'Build Graph Examples'__ below to understand the different ways to set __data_level__ and __graph_level__.
 
 ![update_data_graph_level.png](/readme_images/update_data_graph_level.png)
-
-<span style="color:red;">red</span>
 
 # Build Graph Examples
 

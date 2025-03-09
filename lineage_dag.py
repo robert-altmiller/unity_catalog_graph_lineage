@@ -20,50 +20,6 @@ from scipy.spatial import KDTree
 
 # COMMAND ----------
 
-# DBTITLE 1,Local Parameters
-# # Node and Edge Lineage Graph Level
-# graph_level = "catalog" # acceptable graph_level values are: 'catalog' or 'schema' or 'table' or 'column'
-
-# # Graph paramters (catalog, schema, table)
-# source_catalog = "system"
-# source_schema = "billing"
-# source_table_list = [
-#     'system.billing.list_prices'
-# ]
-
-# COMMAND ----------
-
-# DBTITLE 1,Get  Table Lineage Data For Current Year
-# df_table_lineage = spark.sql(f"""
-#     SELECT
-#         account_id, metastore_id, workspace_id, 
-#         COALESCE(entity_type, 'Standalone') AS entity_type, -- Replace NULL with "Standalone"
-#         count(DISTINCT entity_id) AS unique_entity_id_count,
-#         source_table_full_name, source_table_catalog, source_table_schema, source_table_name,
-#         count(DISTINCT source_path) AS unique_source_path_count, 
-#         SPLIT_PART(source_path, '/', 3) AS s3_bucket_name, 
-#         source_type, target_table_full_name, target_table_catalog, 
-#         target_table_schema, target_table_name, target_path, target_type, created_by, 
-#         MAX(event_date) AS max_event_date
-#     FROM system.access.table_lineage
-#     WHERE source_table_catalog <> target_table_catalog AND event_date >= MAKE_DATE(YEAR(CURRENT_DATE()), 1, 1) -- For current data
-#     GROUP BY 
-#         account_id, metastore_id, workspace_id, entity_type,
-#         source_table_full_name, source_table_catalog, source_table_schema, source_table_name,
-#         SPLIT_PART(source_path, '/', 3), source_type, target_table_full_name, 
-#         target_table_catalog, target_table_schema, target_table_name,
-#         target_path, target_type, created_by
-#     ORDER BY max_event_date DESC;               
-# """)
-
-# # Trim column names (remove extra spaces)
-# df_table_lineage = df_table_lineage.select([col.strip() for col in df_table_lineage.columns])
-# df_table_lineage_catalog = df_table_lineage.where(F.col("source_table_catalog") == F.lit(source_catalog))
-# df_table_lineage_schema = df_table_lineage.where(F.col("source_table_schema") == F.lit(source_schema))
-# df_table_lineage_table = df_table_lineage.where(F.col("source_table_full_name").isin(source_table_list))
-
-# COMMAND ----------
-
 # DBTITLE 1,Get Column Lineage Data For Current Year
 df_col_lineage = spark.sql(f"""
   SELECT

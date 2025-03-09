@@ -331,16 +331,16 @@ class LineageGraph:
 
 # DBTITLE 1,Create and Show Lineage Graph With Nodes and Edges
 # Graph parameters
-src_catalog = ["my_catalog"] #change
-src_schema = ["system.billing"] #change
+src_catalog_list = ["my_catalog"] #change
+src_schema_list = ["system.billing"] #change
 src_table_list = ['system.billing.list_prices'] #change
 
 # Graph and Data levels
 data_level = "column" # 'catalog' or 'schema' or 'table' or 'column'
 graph_level = "column" # 'catalog' or 'schema' or 'table' or 'column'
 
-lineage_data = get_column_lineage_data(src_catalog, src_schema, src_table_list, data_level)
-lineage_graph = LineageGraph(lineage_data, src_catalog, src_schema, src_table_list, data_level, graph_level)
+lineage_data = get_column_lineage_data(src_catalog_list, src_schema_list, src_table_list, data_level)
+lineage_graph = LineageGraph(lineage_data, src_catalog_list, src_schema_list, src_table_list, data_level, graph_level)
 lineage_graph.build_graph()
 lineage_graph.show_graph()
 

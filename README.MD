@@ -22,7 +22,8 @@ The Databricks Unity Catalog Graph Lineage Tool has the following features:
 
 ## How many different types of UC Lineage Graphs can be created?
 
-- In the Databricks notebook section __'Create and Show Lineage Graph With Nodes and Edges'__ update the following section below in _red_, and use the __'Build Graph Examples'__ below to understand the different ways to set __'data_level'__ and __'graph_level'__.
+- In the Databricks notebook section __'Create and Show Lineage Graph With Nodes and Edges'__ update the following section below in _red_, and use the __'Build Graph Examples'__ below to understand the different ways to set __'data_level'__ and __'graph_level'__.  You
+will also want to update the  __'src_catalog_list'__, __'src_schema_list'__, and __'src_table_list'__ so the get_column_lineage_data() Python function knows what data to query for the UC Lineage Graph.  You can include multiple catalogs, schemas, and tables in each of these lists
 
 ![update_data_graph_level.png](/readme_images/update_data_graph_level.png)
 
@@ -58,25 +59,31 @@ The Databricks Unity Catalog Graph Lineage Tool has the following features:
 
 ## Show different UC Lineage Graphs examples
 
-- Here is a 'source catalog' to 'target catalog' UC Lineage Graph example at the 'catalog' graph level.  This shows all the catalogs for the entire Databricks Metastore which are updated
-with table data in the 'system' Databricks catalog.  This can give you a holistic understanding of high-level data movement between catalogs for an individual catalog.
+- Here is a 'source catalog' to 'target catalog' UC Lineage Graph example at the 'catalog' data level.  This shows all the catalogs for the entire Databricks Metastore which are updated
+with table data in the 'system' Databricks catalog.  This can give you a holistic understanding of high-level data movement between catalogs for a single or multiple source catalog.
 
 - data_level = "catalog" and graph_level = "catalog"
 
 ![catalog_to_catalog__catalog_level_graph.png](/readme_images/catalog_to_catalog__catalog_level_graph.png)
 
-- Here is a 'source catalog' to 'target catalog' UC Lineage Graph example at the 'schema' graph level.  This shows a subset the Metastore catalogs which are updated
-with table data in the 'system.billing' Databricks schema.  This can give you a holistic understanding of high-level data movement between catalogs for an individual schema.
+- Here is a 'source catalog' to 'target catalog' UC Lineage Graph example at the 'schema' data level.  This shows a subset the Metastore catalogs which are updated
+with table data in the 'system.billing' Databricks schema.  This can give you a holistic understanding of high-level data movement between catalogs for a single or multiple source schemas.
 
 - data_level = "schema" and graph_level = "catalog"
 
 ![catalog_to_catalog__schema_level_graph.png](/readme_images/catalog_to_catalog__schema_level_graph.png)
 
-- Here is a 'source catalog' to 'target catalog' UC Lineage Graph example at the 'table' graph level.  This shows a subset the Metastore catalogs which are updated
-with table data in the 'system.billing.list_prices' Databricks table.  This can give you a holistic understanding of high-level data movement between catalogs for an individual table.
+- Here is a 'source catalog' to 'target catalog' UC Lineage Graph example at the 'table' data level.  This shows a subset the Metastore catalogs which are updated
+with table data in the 'system.billing.list_prices' Databricks table.  This can give you a holistic understanding of high-level data movement between catalogs for a single or multiple source tables.
 
 - data_level = "table" and graph_level = "catalog"
 
 ![catalog_to_catalog__table_level_graph.png](/readme_images/catalog_to_catalog__table_level_graph.png)
 
 
+- Here is a 'source schema' to 'target schema' UC Lineage Graph example at the 'schema' data level.  This shows a subset the Metastore schemas which are updated
+with table data in the 'system.billing' Databricks schema.  This can give you a holistic understanding of high-level data movement between schemas for a single or multiple source schemas.
+
+- data_level = "schema" and graph_level = "schema"
+
+![catalog_to_catalog__table_level_graph.png](/readme_images/schema_to_schema__schema_level_graph.png)

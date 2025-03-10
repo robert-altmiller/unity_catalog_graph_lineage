@@ -72,7 +72,7 @@ class LineageGraph:
     def __init__(self, df, src_catalogs, src_schemas, src_tables, data_level, graph_level):
         """Initialize the lineage graph with a dataframe, graph level, and title."""
         self.df = df
-        self.metadata = {"catalog": src_catalogs, "schema": src_schema, "table": src_tables, "column": src_tables}
+        self.metadata = {"catalog": src_catalogs, "schema": src_schemas, "table": src_tables, "column": src_tables}
         self.data_level = data_level
         self.level = graph_level
         self.node_hover_text = {} # For keeping tracking of source and target columns

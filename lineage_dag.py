@@ -133,7 +133,7 @@ class LineageGraph:
             hover_text = label
             if not pd.isna(column_list):
                 hover_text_before = (hover_text.split("(")[0]).strip()
-                hover_text_after = (f"({hover_text.split("(")[1]}").strip()
+                hover_text_after = (f"({hover_text.split('(')[1]}").strip()
                 hover_text = hover_text_before + f"Columns: {', '.join(column_list)}<br>" + hover_text_after
             self.node_hover_text[label] = hover_text
 

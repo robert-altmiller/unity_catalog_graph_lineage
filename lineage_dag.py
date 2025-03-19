@@ -5,7 +5,7 @@
 # COMMAND ----------
 
 # DBTITLE 1,Restart Python Environment
- dbutils.library.restartPython()
+dbutils.library.restartPython()
 
 # COMMAND ----------
 
